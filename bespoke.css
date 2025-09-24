@@ -1,0 +1,132 @@
+*{box-sizing: border-box;
+}
+body   { background-color: #F5F5F5; 
+         color: #4A4A4A; 
+         font-family: Arial;
+         margin-left: 30px;
+         margin-right: 30px;}
+header { background-color: #F5F5F5;    
+        text-align: center;}
+header a { text-decoration: none;}
+header a:link {color: #FFFFFF;}
+header a:visited {color: #090706;}
+header a:hover {color: #76CBCA;}
+nav    {padding: 10px;
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 110%;
+        text-align: center;
+        background-color: #76CBCA;
+        margin-bottom: 20px;}
+nav a  { text-decoration: none;}
+nav ul { list-style-type: none;
+        margin: 0; 
+        font-size: 1em;}
+nav a:link {color: #090706;}
+nav a:visited {color: #344873;}
+nav a:hover {color: #A52A2A;}
+nav li {border-bottom : 1px solid #4A4A4A;}
+h1     {margin-bottom: 0;
+        margin-top: 0;
+        font-family: 'Times New Roman', Times, serif;
+        font-style: italic;
+        font-weight: bold;
+        letter-spacing: 0;
+        padding-top: 0.5em;
+        padding-bottom: 0.5em;
+        font-size: 3em;
+        color: #090706}
+h2     { color: #4A4A4A;
+        font-family: 'Times New Roman', Times, serif;
+        text-shadow: 1px 1px 1px #CCCCCC;}
+h3     {font-family: 'Times New Roman', Times, serif;
+        color: #090706;
+        text-align: center;}
+ul     {list-style-image: url(images/marker.gif);}
+dt { color: #002171;} 
+.main-footer{font-size: 0.90em;
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+        padding: 1em;
+        background-color: #D3D3D3;
+        color:#090706;}
+.copyright-footer {font-size: 0.75em;
+        font-style: italic;
+        text-align: center;
+        font-family: Georgia;
+        background-color: #D3D3D3;}
+main    {background-color: #F5F5F5;
+        padding-top: 1px;
+        padding-bottom: 20px;
+        display:block; 
+        overflow: auto;}   
+#homehero {height: 300px;
+        background-image: url(images/cookies.jpg);
+        background-size: 60% 200%;
+        background-repeat: no-repeat;
+        background-position: left center;
+        display: flex;
+        align-items: center;
+        padding-left: 63%;
+        box-sizing: border-box;
+        color:#090706 }
+.customerfav-images {display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 8px;}
+.customerfav-images img {width: calc(25% - 10px);
+        height: auto;
+        border-radius: 5px;
+        display: block;}
+.customerfav-description {display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 8px;}
+.customerfav-description text {width: calc(25% - 10px);
+        height: auto;
+        border-radius: 5px;
+        display: block;}
+@media (min-width: 600px) {
+form {width: 60%;
+      max-width: 30em;
+      display: grid;
+      grid-gap: 1em;
+      grid-template-columns: 6em 1fr;}
+input[type="submit"] {
+        grid-column: 2;
+        width: 9em;
+}
+nav ul {display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+        padding-left: 0;
+        margin: 0;
+        list-style-type: none; }        
+nav li {border-bottom: none;}
+section{margin-left: 2em;
+        margin-right: 2em;
+        flex: 1;}
+.flow  {display: flex;
+        flex-direction: row;}
+}
+@media (min-width: 1024px) {
+#wrapper {margin: 0 auto;
+        width: 80%;
+        border: 1px solid #000033;
+        box-shadow: 3px 3px 3px #000033;}  
+nav    {text-align: left;
+        padding-left: 1em;}}
+@supports(display: grid) {
+nav ul {display: flex;
+        flex-direction: row;}
+header { grid-area: header; }
+nav    { grid-area: nav; }
+.hero  { grid-area: hero;}
+main   { grid-area: main; }
+footer { grid-area: footer; }
+#wrapper {display: grid;
+                    grid-template-areas: 
+                        "header header"
+                        "nav hero"
+                        "nav main"
+                        "nav footer";}}
